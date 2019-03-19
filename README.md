@@ -2,4 +2,4 @@
 
 [你可以戳这里查看演示demo](https://evelope.github.io/css3-study)
 
-[掘金](https://juejin.im/post/5c87191c5188257f882f09c1)
+[掘金教程](https://juejin.im/post/5c87191c5188257f882f09c1)
