@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>animate</title>
+  <style>
+    /* body {
+      perspective: 400px;
+    } */
+
+    button{
+      margin-top: 100px;
+      font-size: 40px;
+    }
+    .transitionBox {
+      width: 260px;
+      height: 119px;
+
+      background: #ff0000;  
+      /* animation: ani 5s 2s infinite ease; */
+      /* 不支持的 */
+      /* display  渐变 */
+    }
+    .transitionBox:hover {
+      opacity: 0.3;
+      opacity: 0.3;
+
+      border-radius: 100px;
+
+      background: #fff000; 
+    }
+    .transitionBox2 {
+      width: 260px;
+      height: 119px;
+      transition: opacity 0.5s, background 0.5s, border-radius 0.5s;
+      background: #ff0000;  /*  background-color  */
+
+      background-size: cover;
+      
+      /* animation: ani 5s 2s infinite ease; */
+      /* 不支持的 */
+      /* display  渐变 */
+    }
+
+    .transitionBox2:hover {
+      opacity: 0.3;
+
+      border-radius: 100px;
+
+      background: #fff000; 
+
+      background-size: cover;
+    }
+
+
+    .keyframesBox{
+      width: 260px;
+      height: 119px;
+      background: #ff0000; 
+      animation: ani 5s 2s infinite ease;
+    }
+
+    @keyframes ani {
+      20%{    opacity: 0.3;  }
+      40%{    border-radius: 100px;  }
+      60%{    background-color: #fff000;  }
+    }
+
+    .perBox {
+      perspective: 1100px;
+    }
+    .aniBox {
+      position: relative;
+      margin: 200px auto;
+      transform-style: preserve-3d;
+      width: 220px;
+      height: 220px;
+      animation: box-3d 5s infinite linear;
+    }
+
+    .aniBox>div {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .ani1 {
+      background: #4879dc;
+      transform: translateZ(110px)
+    }
+    .ani2 {
+      background: #3bd168;
+      transform: translateZ(-110px)
+    }
+    .ani3 {
+      background: #e31653;
+      transform: rotateY(90deg) translateZ(110px)
+    }
+    .ani4 {
+      background: #1ed3eb;
+      transform: rotateY(-90deg) translateZ(110px)
+    }
+    .ani5 {
+      background: #e9c80f;
+      transform: rotateX(90deg) translateZ(110px)
+    }
+    .ani6 {
+      background: #821fd3;
+      transform: rotateX(-90deg) translateZ(110px)
+    }
+
+    @keyframes box-3d {
+      100% {
+        transform: rotateX(360deg) rotateZ(-720deg)
+      }
+    }
+  </style>
+</head>
+<body>
+    <button class="transitionBox">我没动画</button>
+    <button class="transitionBox2">我有动画</button>
+    <button class="keyframesBox">我有动画</button>
+
+
+    <p>客官，您要的div：</p>
+    <div class="perBox">
+      <div class="aniBox">
+        <div class="ani1"></div>
+        <div class="ani2"></div>
+        <div class="ani3"></div>
+        <div class="ani4"></div>
+        <div class="ani5"></div>
+        <div class="ani6"></div>
+      </div>
+    </div>
+</body>
+</html>
+
+<!-- https://yq.aliyun.com/zt/222656 -->
+
+<!-- https://juejin.im/post/5c5258ffe51d45299a08e012 -->
